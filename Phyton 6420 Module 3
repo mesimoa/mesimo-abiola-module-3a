@@ -1,0 +1,27 @@
+product1 = Product(name="Collateral Insurance", description="Covers the insurance of property pledged as collateral throughout the lifespan of the loan upon the policyholder's death.")
+product2 = Product(name="Health Insurance", description="Provides coverage for medical expenses.")
+
+# Demonstarting Creating a Policy holders
+policy_holder1 = PolicyHolder(policyholder_number=1, first_name="Testimony", last_name="Akande", 
+                              address="15 Femi Ogun Street Shangisha, Lagos, Nigeria", 
+                              phone="+2348139652724", email="oladunnimesimo@gmail.com")
+
+policy_holder2 = PolicyHolder(policyholder_number=2, first_name="Titilayo", last_name="Tijani", 
+                              address="25 Mosebolatan Street, Magodo, Lagos, Nigeria", 
+                              phone="+2348086183291", email="titilayo.tijani@gmail.com")
+
+# Product is being Register with Policy Holders
+policy_holder1.register_policyholder(product1)
+policy_holder2.register_policyholder(product2)
+
+# Payment is being process for the Policy Holders
+payment1 = Payment(policy_holder_id=1)
+payment2 = Payment(policy_holder_id=2)
+
+payment1.payment_processing("palmpay")
+payment2.payment_processing("Moniepoint")
+
+# Display Policy Holder Account Details
+policy_holder1.get_details()
+policy_holder2.get_details()
+
